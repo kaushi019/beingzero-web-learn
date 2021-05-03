@@ -1,3 +1,7 @@
+.flexer{
+    display: flex;
+}
+
 .heading{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 300;
@@ -5,6 +9,80 @@
 
 .icons{
     border-radius: 30px;
-    width: 19%;
-    height: 25%;
+    width: 40%;
+    height: 75%;
+}
+
+.opt{
+    font-size: 13.5px;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+}
+.sign-in{
+    width: 100px;
+}
+
+.head{
+    font-size: 80px;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#search-bar{
+    border-left-color: white;
+    border-right-color: white;
+}
+.ico{
+    background-color: white;
+    border-radius: 15px;
+}
+
+.g-btn{
+    background-color: rgb(241, 241, 241);
+    color: rgb(78, 78, 78);
+    border-color: rgb(241, 241, 241);
+}
+
+.lang-size{
+    font-size: 12.5px;
+}
+.a-color{
+    color: rgb(0, 0, 185);
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    color: rgb(99, 99, 99);
+}
+.footer-line{
+    display: flex;
+}
+.footer1{
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 11px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.footer2{
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.footer-links{
+    font-weight: 380;
+    margin-left: 25px;
+    color: rgb(83, 83, 83);
+}
+.footer3{
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    font-size: 15px;
 }
