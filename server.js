@@ -17,6 +17,8 @@ app.listen(PORT, function(){
 })
 
 
+
+
 app.get("/", function(req, res){
     // res.send("Welcome to Kaushik's Site");
     res.sendFile(__dirname+'/frontend/html/home.html')
@@ -28,4 +30,8 @@ app.get("/resume", function(req, res){
 
 app.get("/google", function(req, res){
     res.sendFile(__dirname+'/frontend/html/google.html')
+})
+
+app.get("/apple", function(req, res){
+    res.sendFile(__dirname+'/frontend/html/apple.html')
 })
