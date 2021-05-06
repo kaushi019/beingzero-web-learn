@@ -8,10 +8,10 @@ function change(){
 
     //rgb code css
     var code = "rgb("+r+", "+g+", "+b+")";
-    if(r<=255 && g==255)
-        document.getElementById("code").style.color = "black";
-    else
+    if(r+g+b<=341 || (g==0 && b==0))
         document.getElementById("code").style.color = "white";
+    else
+        document.getElementById("code").style.color = "black";
     document.getElementById("code").innerHTML = code;
 
 
