@@ -19,7 +19,7 @@ function register(){
     console.log(password);
 
     if(number.length!=10)alert("Number is invalid");
-    if(password.length>6)alert("Password should be atleast 6 characters");
+    if(password.length<6)alert("Password should be atleast 6 characters");
 
 }
 
@@ -30,5 +30,5 @@ function login(){
     console.log(email);
     console.log(password);
 
-    if(password.length>6)alert("Password is invalid");
+    if(password.length<6)alert("Password is invalid");
 }

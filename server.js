@@ -51,3 +51,12 @@ app.get("/login", function(req, res){
 app.get("/register", function(req, res){
     res.sendFile(__dirname+'/frontend/html/register.html')
 })
+
+
+app.get("/charts", function(req, res){
+    res.sendFile(__dirname+'/frontend/html/charts.html')
+})
+
+app.get("/scrape", function(req, res){
+    res.sendFile(__dirname+'/frontend/html/scrape.html')
+})
