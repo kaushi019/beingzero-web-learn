@@ -9,7 +9,12 @@
     border: 1px solid black;
 } */
 
+#solved{
+    width: 50%;
+}
+
 .b-cont{
     display: flex;
     justify-content: center;
 }
+

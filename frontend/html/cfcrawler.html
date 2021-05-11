@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>CF - Crawler</title>
+    <title>CodeForces Crawler</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/crawler.css">
+    <link rel="icon" href="/fav-icon/cfcrawler.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -17,8 +18,8 @@
 
     <div class="nav-set">
       <nav class="navbar fixed-top navbar-dark bg-dark ">
-      <span style="color: rgb(218, 218, 218);">CodeForces Crawler</span>
-    </nav>
+        <span style="color: rgb(218, 218, 218);"> <img src="/img/cflogo.jpg" style="width: 5%;height: 5%;" alt="CF"> &nbsp; CodeForces Crawler</span>
+      </nav>
     </div>
 
 
@@ -37,32 +38,55 @@
         
       </div>
 
+    </div>
+
 
       <br>
+
 
       <div class="container data-grp">
 
         <div class="container">
-          <h1 id="cf_handle"></h1>  <h3 id="rank"></h3>  <h4 id="rating"></h4>
+          <table id="user-info"></table>
         </div>
+
+        <br>
+
+
 
         <div class="b-cont">
           <div id="languages" ></div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <div id="submissions" ></div>
         </div>
+
+
+        <br>
+
+
+        <div>
+          <div id="levels"></div>
+          <div id="problem-ratings"></div>
+        </div>
+
+        <br>
+
+        <div>
+          <h4 id="contests-name"></h4>
+          <table class="table table-striped" id="contests"></table>
+        </div>
+
+
+        <br>
+
+
+
+
 
 
       </div>
 
 
-
-
-
-      <table id="board"></table>
-
-    </div>
-
-    
     
 
 
