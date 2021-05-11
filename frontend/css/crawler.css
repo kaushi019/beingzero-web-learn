@@ -1,0 +1,15 @@
+.nav-set{
+    margin-bottom: 40px;
+}
+
+/* .inp-grp{
+} */
+
+/* .data-grp{
+    border: 1px solid black;
+} */
+
+.b-cont{
+    display: flex;
+    justify-content: center;
+}

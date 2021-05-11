@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kaushi019/beingzero-web-learn#readme",
   "dependencies": {
+    "chart.js": "^3.2.1",
     "express": "^4.17.1"
   }
 }

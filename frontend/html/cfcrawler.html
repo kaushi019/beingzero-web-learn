@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CF - Crawler</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/crawler.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script src="/js/cfcrawler.js"></script>
+  </head>
+  <body>
+    
+
+    <div class="nav-set">
+      <nav class="navbar fixed-top navbar-dark bg-dark ">
+      <span style="color: rgb(218, 218, 218);">CodeForces Crawler</span>
+    </nav>
+    </div>
+
+
+
+    <br>
+
+
+    <div class="container inp-grp">
+
+      <div class="input-group mb-3" style="width: 45%;margin-left: auto;margin-right: auto;">
+        <input class="form-control" type="text" name="name" id="username" placeholder="CF Handle">
+        
+        <div class="input-group-append">
+          <input class="btn btn-outline-success" type="submit" value="Get Data" id="crawl" >
+        </div>
+        
+      </div>
+
+
+      <br>
+
+      <div class="container data-grp">
+
+        <div class="container">
+          <h1 id="cf_handle"></h1>  <h3 id="rank"></h3>  <h4 id="rating"></h4>
+        </div>
+
+        <div class="b-cont">
+          <div id="languages" ></div>
+          <div id="submissions" ></div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <table id="board"></table>
+
+    </div>
+
+    
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
