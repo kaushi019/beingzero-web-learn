@@ -3,8 +3,7 @@
   <head>
     <title>CodeForces Crawler</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/crawler.css">
     <link rel="icon" href="/fav-icon/cfcrawler.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,11 +28,12 @@
 
     <div class="container inp-grp">
 
-      <div class="input-group mb-3" style="width: 45%;margin-left: auto;margin-right: auto;">
+      <div class="container input-group mb-3" style="width: 25%; margin-left: auto;margin-right: auto;">
+
         <input class="form-control" type="text" name="name" id="username" placeholder="CF Handle">
         
-        <div class="input-group-append">
-          <input class="btn btn-outline-success" type="submit" value="Get Data" id="crawl" >
+        <div class="input-group-append" >
+          <input class="container btn btn-outline-success" type="submit" value="Get Data" id="crawl" >
         </div>
         
       </div>
@@ -43,8 +43,10 @@
 
       <br>
 
+      <div id="loading" class="loader"></div>
 
-      <div class="container data-grp">
+
+      <div class="container">
 
         <div class="container">
           <table id="user-info"></table>

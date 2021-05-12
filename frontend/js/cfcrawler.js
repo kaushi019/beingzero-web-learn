@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-   
+    $("#loading").hide();
     $("#user-info").hide();
     $("#languages").hide();
     $("#submissions").hide();
@@ -39,6 +39,7 @@ $(document).ready(function(){
     $("#crawl").click(function(){
 
 
+        $("#loading").show();
         $("#user-info").hide();
         $("#languages").hide();
         $("#submissions").hide();
@@ -60,6 +61,9 @@ $(document).ready(function(){
         const userContestsAPI = parentURL+childURL.userContests+user_id;
         getUserContests(userContestsAPI);
 
+
+        // $("#loading").hide();
+
     });
 
 
@@ -67,10 +71,6 @@ $(document).ready(function(){
     async function getUserInfo(url){
         const res = await fetch(url);
         var data = await res.json();
-    
-        // $("#cf_handle").html(user_id);
-        // $("#rating").html(data.result[0].rating);
-        // $("#rank").html(data.result[0].rank);
 
 
         user_id = data.result[0].handle;
@@ -204,6 +204,8 @@ $(document).ready(function(){
         google.charts.setOnLoadCallback(drawChartVerdicts);
         // google.charts.setOnLoadCallback(drawChartLevels);
 
+        $("#loading").hide();
+
     }
     
 
@@ -245,8 +247,8 @@ $(document).ready(function(){
             
         var options = {
             title : 'Languages of '+user_temp,
-            width : 600,
-            height : 500,
+            width : 550,
+            height : 450,
             is3D : true,
             pieSliceText : 'none',
         };
@@ -273,8 +275,8 @@ $(document).ready(function(){
             
         var options = {
             title : 'Verdicts of '+user_temp,
-            width : 600,
-            height : 500,
+            width : 550,
+            height : 450,
             is3D : true,
             pieSliceText : 'none',
         };
@@ -312,5 +314,9 @@ $(document).ready(function(){
         
     //     $("#levels").show()
     // }
+
+
+
+
 
 });
