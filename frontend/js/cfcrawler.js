@@ -187,6 +187,11 @@ $(document).ready(function(){
 
 
 
+        
+
+
+
+
         //DOM
         var t = "<tr><td id='userrank' >"+rank+"</td></tr>";
         t += "<tr><td id='userid'>"+user_id+"</td></tr>";

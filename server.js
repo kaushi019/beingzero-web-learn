@@ -60,3 +60,7 @@ app.get("/charts", function(req, res){
 app.get("/crawler", function(req, res){
     res.sendFile(__dirname+'/frontend/html/cfcrawler.html')
 })
+
+app.get("/todo", function(req, res){
+    res.sendFile(__dirname+'/frontend/html/todo.html')
+})

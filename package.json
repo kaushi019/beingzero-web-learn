@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/kaushi019/beingzero-web-learn#readme",
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.0",
     "chart.js": "^3.2.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jquery": "^3.6.0"
   }
 }
