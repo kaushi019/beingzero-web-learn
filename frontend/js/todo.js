@@ -1,7 +1,12 @@
 $(document).ready(()=>{
 
-    // localStorage.clear()
-    if(localStorage !== null)check();
+
+    $("#clear").hide()
+
+    if(localStorage !== null){
+        $("#clear").show()
+        check();
+    }
 
     var a = "";
     var bk = [];
@@ -15,7 +20,11 @@ $(document).ready(()=>{
     });
 
 
-    
+    $("#clear").click(function(){
+        localStorage.clear();
+        $("#t-list").hide()
+        $("#clear").hide()
+    })
 
 
 
