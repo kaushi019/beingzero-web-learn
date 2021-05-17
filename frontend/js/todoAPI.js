@@ -6,6 +6,7 @@ var deployedURL = 'https://bz-m4.herokuapp.com/api/todoAPI';
 display();
 
 function display(){
+
     fetch(deployedURL)
         .then(res => {
             return res.json();
