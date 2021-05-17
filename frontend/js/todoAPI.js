@@ -4,7 +4,7 @@ document.getElementById('tlist').innerHTML = "";
 display();
 
 function display(){
-    fetch('http://bz-m4.herokuapp.com/api/todoAPI')
+    fetch('https://bz-m4.herokuapp.com/api/todoAPI')
         .then(res => {
             return res.json();
         })
@@ -28,6 +28,6 @@ function del(c){
     
     var d = document.getElementById(x)
     d.parentNode.removeChild(d)
-    fetch(`http://bz-m4.herokuapp.com/api/todoAPI/${y}`, {method : 'DELETE'} );
+    fetch(`https://bz-m4.herokuapp.com/api/todoAPI/${y}`, {method : 'DELETE'} );
     display();
 }
