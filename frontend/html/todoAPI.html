@@ -9,25 +9,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/todo.css">
   </head>
-  <body>
+  <body style="background-color: rgb(255, 233, 233);">
     
+    <br>
+
     <h1 id="todo-head">Todos</h1>
 
-    <div class="container">
+    <div class="container" style="width: 50%;">
         <form action="/todoAPI" method="POST">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Add task" name="task" id="task">
+                <input type="text" class="form-control" placeholder="Enter your Task" name="task" id="task">
                 <div class="input-group-append">
-                  <input class="btn btn-outline-secondary" onclick="display()" type="submit" value="Add" id="addtask">
+                  <input class="btn btn-outline-danger" onclick="display()" type="submit" value="Add Task" id="addtask">
                 </div>
               </div>
         </form>
     </div>
 
-    <div class="container">
+    <br>
+
+    <div class="container" style="width: 75%;">
       <table id="tlist" class="table table-hover"></table>
     </div>
 
+    
 
 
 

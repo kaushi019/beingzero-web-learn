@@ -13,10 +13,12 @@
     justify-content: center;
 }
 
-#t-list{
-    background-color: white;
+#tlist{
+    background-color: rgb(255, 200, 200);
 }
 
 #todo-head{
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
 }

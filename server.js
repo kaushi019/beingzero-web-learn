@@ -78,8 +78,7 @@ app.get("/todoAPI", function(req, res){
 
 app.post("/todoAPI",function(req,res){
     var d = req.body.task;
-    data.push(d);
-    console.log(data)
+    data.push([d,'fa fa-check','none']);
     res.redirect('/todoAPI')
 })
 
@@ -93,4 +92,15 @@ app.get("/api/todoAPI",function(req,res){
 
 app.delete("/api/todoAPI/:id",function(req,res){
     data.splice(parseInt(req.params.id),1);
-})
+});
+
+app.put("/api/todoAPI/:id",function(req,res){
+
+    data[parseInt(req.params.id)][1] = 'fa fa-window-close';
+    data[parseInt(req.params.id)][2] = 'line-through';
+    var f = {
+        status : "ok",
+        result : data
+    }
+    res.end(JSON.stringify(f))
+});
