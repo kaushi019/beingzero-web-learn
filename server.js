@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
 
+var data = []
 
 
 
-
-
+app.use(express.urlencoded({ extended:true }))
+app.use(express.json())
 
 app.use(express.static(__dirname+'/frontend'));
 
@@ -15,6 +16,12 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, function(){
     console.log("Server Starting running on http://localhost:"+PORT);
 })
+
+
+
+
+
+
 
 
 
@@ -53,14 +60,37 @@ app.get("/register", function(req, res){
 })
 
 
-app.get("/charts", function(req, res){
-    res.sendFile(__dirname+'/frontend/html/charts.html')
-})
-
 app.get("/crawler", function(req, res){
     res.sendFile(__dirname+'/frontend/html/cfcrawler.html')
 })
 
 app.get("/todo", function(req, res){
     res.sendFile(__dirname+'/frontend/html/todo.html')
+})
+
+
+
+
+
+app.get("/todoAPI", function(req, res){
+    res.sendFile(__dirname+'/frontend/html/todoAPI.html')
+})
+
+app.post("/todoAPI",function(req,res){
+    var d = req.body.task;
+    data.push(d);
+    console.log(data)
+    res.redirect('/todoAPI')
+})
+
+app.get("/api/todoAPI",function(req,res){
+    var f = {
+        status : "ok",
+        result : data
+    }
+    res.end(JSON.stringify(f))
+});
+
+app.delete("/api/todoAPI/:id",function(req,res){
+    data.splice(parseInt(req.params.id),1);
 })
