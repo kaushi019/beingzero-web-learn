@@ -6,7 +6,7 @@ var deployedURL = 'https://bz-m4.herokuapp.com/api/todoAPI';
 display();
 
 function display(){
-    fetch('https://bz-m4.herokuapp.com/api/todoAPI')
+    fetch(deployedURL)
         .then(res => {
             return res.json();
         })
@@ -38,18 +38,19 @@ function del(c){
 
 
         fetch(`https://bz-m4.herokuapp.com/api/todoAPI/${y}`, {method : 'PUT'})
-        .then(res => {
-            return res.json();
-        })
-        .then(newData =>{
-            var t = "";
-            for(let i=newData.result.length-1;i>=0;i--){
-                t += "<tr id='t"+i+"' ><td style='text-decoration:"+newData.result[i][2]+";' >"+newData.result[i][0]+"</td><td align='right' ><i id='b"+i+"' class='"+newData.result[i][1]+"' aria-hidden='true' onclick='del(this.id)' ></i></td></tr>";
-            }
-            document.getElementById('tlist').innerHTML = t;
+        display();
+        // .then(res => {
+        //     return res.json();
+        // })
+        // .then(newData =>{
+        //     var t = "";
+        //     for(let i=newData.result.length-1;i>=0;i--){
+        //         t += "<tr id='t"+i+"' ><td style='text-decoration:"+newData.result[i][2]+";' >"+newData.result[i][0]+"</td><td align='right' ><i id='b"+i+"' class='"+newData.result[i][1]+"' aria-hidden='true' onclick='del(this.id)' ></i></td></tr>";
+        //     }
+        //     document.getElementById('tlist').innerHTML = t;
 
-        })
-        .catch(err => console.error("Error occurred " + err))
+        // })
+        // .catch(err => console.error("Error occurred " + err))
 
     }
     else{
