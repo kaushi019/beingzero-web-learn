@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose')
 const app = express();
 
 var data = []
@@ -63,6 +64,16 @@ app.get("/register", function(req, res){
 app.get("/crawler", function(req, res){
     res.sendFile(__dirname+'/frontend/html/cfcrawler.html')
 })
+
+
+app.get('/housie',(req,res)=>{
+    res.sendFile(__dirname+'/frontend/html/housie.html')
+})
+
+
+
+
+
 
 app.get("/todo", function(req, res){
     res.sendFile(__dirname+'/frontend/html/todo.html')
