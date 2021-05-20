@@ -54,6 +54,7 @@ $(document).ready(()=>{
 
     $("#start").click(()=>{
 
+
         var time = setInterval(()=>{
 
             if(numbers.length==0){
@@ -72,7 +73,7 @@ $(document).ready(()=>{
     
             }
 
-        }, 200);
+        }, 2500);
 
 
     })
