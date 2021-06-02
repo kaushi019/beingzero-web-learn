@@ -1,9 +1,30 @@
 const express = require('express');
 const mongoose = require('mongoose')
+const cors = require('cors')
 const app = express();
 
 var data = []
 
+
+// app.use(
+//     cors({
+//         origin : 'http://localhost:3000',
+//         credentials:true,
+//         optionSuccessStatus:200,
+//         methods : 'GET'
+//     })
+// )
+
+// app.use((req,res,next)=>{
+//     res.header("Access-Control-Allow-Origin","*");
+//     res.header("Access-Control-Allow-Headers","Origin");
+
+//     if(req.method === 'OPTIONS'){
+//         res.header('Access-Control-Allow-Methods','GET,POST');
+//         return res.status(200).json({});
+//     }
+//     next();
+// })
 
 
 app.use(express.urlencoded({ extended:true }))
@@ -49,8 +70,8 @@ app.get("/colors", function(req, res){
     res.sendFile(__dirname+'/frontend/html/colors.html')
 })
 
-app.get("/forms", function(req, res){
-    res.sendFile(__dirname+'/frontend/html/forms.html')
+app.get("/cors", function(req, res){
+    res.sendFile(__dirname+'/frontend/html/corsTrail.html')
 })
 
 app.get("/login", function(req, res){

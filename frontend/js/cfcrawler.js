@@ -116,7 +116,6 @@ $(document).ready(function(){
             userProblemRatingInfo[pbr]++;
         }
 
-        console.log(userLevelInfo)
         console.log(userProblemRatingInfo)
     
         //languages
@@ -182,12 +181,29 @@ $(document).ready(function(){
         while(l[j]!=":")j++;
         l = l.substring(0,j-1);
         levelList.push(l);
-        console.log(levelList)
+        levelList.sort();
 
 
 
-
-        
+        //problemrating
+        var pbrate = JSON.stringify(userProblemRatingInfo)
+        l = "";
+        for(let i=2;i<pbrate.length;i++){
+            if(pbrate[i]==","){
+                let k = 0;
+                while(l[k]!=":")k++;
+                l = l.substring(0,k-1);
+                problemRatingList.push(l);
+                l = "";
+                i++;
+            }
+            else
+                l+=pbrate[i];
+        }
+        j=0;
+        while(l[j]!=":")j++;
+        l = l.substring(0,j-1);
+        problemRatingList.push(l);
 
 
 
@@ -207,7 +223,9 @@ $(document).ready(function(){
 
         google.charts.setOnLoadCallback(drawChartLanguages);
         google.charts.setOnLoadCallback(drawChartVerdicts);
-        // google.charts.setOnLoadCallback(drawChartLevels);
+        google.charts.setOnLoadCallback(drawChartLevels);
+        google.charts.setOnLoadCallback(drawChartProblemRatings);
+
 
         $("#loading").hide();
 
@@ -295,32 +313,70 @@ $(document).ready(function(){
         $("#submissions").show()
     }
 
-    // function drawChartLevels(){
-    //     var data = new google.visualization.DataTable();
-    //         data.addColumn('string', 'solvedcount');
-    //         data.addColumn('number', 'Slices');
+    function drawChartLevels(){
+        var data = new google.visualization.DataTable();
+            data.addColumn('string', 'solvedcount');
+            data.addColumn('number', 'Count');
     
-    //         for(let i=0;i<levelList.length;i++)
-    //             data.addRows([
-    //                 [ levelList[i],userLevelInfo[levelList[i]] ]
-    //             ]);
-            
-    //     var options = {
-    //         title : 'Levels of Problems Solved',
-    //         legend : {position : 'none'}
-    //         // width : 600,
-    //         // height : 500,
-    //         // is3D : true,
-    //         // pieSliceText : 'none',
-    //     };
+            var cnt = 0;
+            for(let i=0;i<levelList.length;i++){
+                if(levelList[i].length>1){
+                    cnt+=userLevelInfo[levelList[i]];
+                    continue;
+                }
+                data.addRows([
+                    [ levelList[i],userLevelInfo[levelList[i]] ]
+                ]);
+            }
+            data.addRows([
+                [ "Other",cnt ]
+            ]);
+
+        var options = {
+            title : 'Levels of Problems Solved',
+            legend : {position : 'none'},
+            bar: {groupWidth: "80%"},
+            width : 800,
+            height : 300
+        };
     
-    //     var chart = new google.visualization.Histogram(document.getElementById('levels'));
-    //     chart.draw(data, options);
+        var chart = new google.visualization.ColumnChart(document.getElementById('levels'));
+        chart.draw(data, options);
         
-    //     $("#levels").show()
-    // }
+        $("#levels").css({
+            "border" : "1px solid black"
+        })
+        $("#levels").show()
+    }
 
 
+    function drawChartProblemRatings(){
+        var data = new google.visualization.DataTable();
+            data.addColumn('string', 'solvedcount');
+            data.addColumn('number', 'Count');
+    
+            for(let i=0;i<problemRatingList.length;i++){
+                data.addRows([
+                    [ problemRatingList[i],userProblemRatingInfo[problemRatingList[i]] ]
+                ]);
+            }
+
+        var options = {
+            title : 'Ratings of Problems Solved',
+            legend : {position : 'none'},
+            bar: {groupWidth: "75%"},
+            width : 805,
+            height : 350
+        };
+    
+        var chart = new google.visualization.ColumnChart(document.getElementById('problem-ratings'));
+        chart.draw(data, options);
+
+        $("#problem-ratings").css({
+            "border" : "1px solid black"
+        })
+        $("#problem-ratings").show()
+    }
 
 
 

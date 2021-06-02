@@ -7,10 +7,6 @@
     width: 50%;
 }
 
-.b-cont{
-    display: flex;
-    justify-content: center;
-}
 
 .loader {
     border: 6px solid #f5f5f5;
